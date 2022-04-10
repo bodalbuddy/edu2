@@ -1,4 +1,3 @@
-
 # 베이스 이미지 이며 이미지 이름 앞에 아무것도 없으면 docker hub에서 가져온다.
 FROM python:3.8-slim
 
@@ -13,10 +12,9 @@ ADD . /app
 # RUN pip install -r requirements.txt
 
 # 직접 라이브러리를 추가 할수 있다. 단 라이브러리가 많아지면 불편하다.
-RUN pip3 install flask==1.1.2
-RUN pip3 install flask-cors
-RUN pip3 install flask-restplus
-RUN pip3 install itsdangerous==2.0.1
+RUN pip3 install flask==2.0.3
+RUN pip3 install flask-cors==3.0.10
+RUN pip3 install flask_restx
 RUN pip3 install Werkzeug==2.0.3
 
 # 기본 이미지는 대부분 GMT+0 기준으로 생성되어 한국 시간으로 변경 해준다
